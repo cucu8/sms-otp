@@ -9,12 +9,17 @@
   <body>
     <div class="container">
       <h2>Doğrulama Kodu</h2>
-      <input
-        type="text"
-        id="otpInput"
-        inputmode="numeric"
-        autocomplete="one-time-code"
-        maxlength="6" />
+      <form action="/submit" method="POST">
+        <input
+          type="text"
+          name="otp"
+          autocomplete="one-time-code"
+          inputmode="numeric"
+          maxlength="6"
+          required />
+        <button type="submit">Gönder</button>
+        <div class="js-text">Code:</div>
+      </form>
     </div>
     <script src="script.js"></script>
   </body>
