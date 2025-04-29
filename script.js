@@ -2,6 +2,7 @@ const otpInput = document.getElementById("otpInput");
 
 if ("OTPCredential" in window) {
   window.addEventListener("DOMContentLoaded", async () => {
+    alert("document loaded");
     try {
       const ac = new AbortController();
       const otp = await navigator.credentials.get({
